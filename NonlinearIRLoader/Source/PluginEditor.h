@@ -32,34 +32,35 @@ private:
     
     NonlinearIRLoaderAudioProcessor& audioProcessor;
     
-    // load IR Button
+ 
+    // Load IR Button and Label
     juce::TextButton loadFileButton;
-    // load IR Label
     juce::Label loadFileLabel;
-    // IR name Display
+
+    // IR Name Display
     juce::Label irNameDisplay;
-    //juce::FileChooser fChooser{"Select a plugin..."};
+
+    // File Chooser
     std::unique_ptr<juce::FileChooser> fileChooser;
+
     // Nonlinear Control
     juce::Slider nonlinearControl;
     juce::Label nonsliderLabel;
+    juce::TextButton nonOnOffButton; // NonOnOff 按鈕
+
     // Volume Control
     juce::Slider volumeControl;
     juce::Label volumeLabel;
-    // Volume Control
+
+    // Pan Control
     juce::Slider panControl;
     juce::Label panLabel;
+
     // EQ Control
     juce::Slider eqControl;
     juce::Label eqLabel;
-    
-    juce::Rectangle<int> borderRect; // 用於包圍滑桿的邊框矩形
 
-
-    
-
-    
-   
-
+    // Border Rectangle
+    juce::Rectangle<int> borderRect;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NonlinearIRLoaderAudioProcessorEditor)
 };
